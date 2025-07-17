@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CloudKing Pro Mod | This Trippy Hippie</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&family=Creepster&family=Nosifer&family=Butcherman&display=swap"
+        rel="stylesheet">
+ <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Minimal custom CSS to match your existing product cards */
+        .product-gallery {
+            position: relative;
+        }
+        
+        .main-image {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .thumbnail {
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+        
+        .thumbnail:hover, .thumbnail.active {
+            border-color: #6c5ce7;
+        }
+        
+        .product-price {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        
+        .original-price {
+            text-decoration: line-through;
+            color: #adb5bd;
+            font-size: 1.3rem;
+            margin-left: 10px;
+        }
+        
+        .product-meta i {
+            color: #00cec9;
+            margin-right: 10px;
+        }
+        .main-image img{
+            height: 500px;
+        }
+        .product-des h1{
+            font-family: "Creepster", cursive;
+        }
+        .current-price{
+            font-family: "Creepster", cursive;
+            letter-spacing: 1.5px;
+            font-size: 40px;
+        }
+        .cart-btn{
+             font-family: "Creepster", cursive;
+            letter-spacing: 1.5px;
+        }
+        h4{
+             font-family: "Creepster", cursive;
+            letter-spacing: 1.5px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Your Existing Header -->
+    <header class="fixed-top banner-top">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center py-3">
+                <div class="social-icons d-flex align-items-center">
+                    <a href="#" class="social-link me-2" data-aos="fade-down" data-aos-delay="100">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-link me-2" data-aos="fade-down" data-aos-delay="200">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="#" class="social-link" data-aos="fade-down" data-aos-delay="300">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                </div>
+                <div class="search-box" data-aos="fade-down" data-aos-delay="350">
+                    <form class="search-form">
+                        <input type="text" class="search-input" placeholder="Search for trippy products..."
+                            aria-label="Search">
+                        <button type="submit" class="search-button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <div class="header-actions">
+                    <button class="btn login-btn me-2" data-aos="fade-down" data-aos-delay="400">
+                        <i class="fas fa-user me-2"></i>Login
+                    </button>
+                    <button class="btn cart-btn" data-bs-toggle="offcanvas" data-bs-target="#shoppingCartOffcanvas">
+                        <i class="fas fa-shopping-cart me-2"></i>
+                        <span class="cart-count">3</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Your Existing Banner -->
+    <section class="categories-section py-5 position-relative overflow-hidden" style="padding-top: 100px!important;">
+        <video autoplay muted loop playsinline class="position-absolute w-100 h-100"
+            style="object-fit: cover; z-index: 0; top: 0; left: 0;">
+            <source src="images/vape (1).mp4" type="video/mp4">
+            <img src="images/vape-fallback-bg.jpg" alt="Vape background"
+                style="width: 100%; height: 100%; object-fit: cover;">
+        </video>
+        <div class="position-absolute w-100 h-100"
+            style="background: rgb(13 110 253 / 68%);; z-index: 1; top: 0; left: 0;"></div>
+        <div class="container position-relative" style="z-index: 2;">
+            <h2 class="section-title text-center my-lg-5 my-3" data-aos="fade-up">
+                <span class="trippy-text">CloudKing Pro Mod</span>
+            </h2>
+        </div>
+    </section>
+
+    <!-- Product Details Section -->
+    <section class=" py-5 store-section-inner" style="background-color: white!important;">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Product Gallery -->
+                <div class="col-lg-6">
+                    <div class="product-gallery">
+                        <div class="main-image mb-3">
+                            <img src="images/pr (1).jpg" alt="CloudKing Pro Mod" class="img-fluid w-100">
+                        </div>
+                        <div class="d-flex gap-3">
+                            <div class="thumbnail active">
+                                <img src="images/pr (1).jpg" alt="Thumbnail 1" class="img-fluid h-100">
+                            </div>
+                            <div class="thumbnail">
+                                <img src="images/pr-5.jpg" alt="Thumbnail 2" class="img-fluid h-100">
+                            </div>
+                            <div class="thumbnail">
+                                <img src="images/pr (3).jpg" alt="Thumbnail 3" class="img-fluid h-100">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product Info -->
+                <div class="col-lg-6 product-des">
+                    <h1 class="fw-bold mb-3">CloudKing Pro Mod</h1>
+                    <p class="lead mb-4">200W box mod with OLED display, The CloudKing Pro Mod is the ultimate vaping device for cloud chasers and flavor enthusiasts alike.</p>
+                    
+                    <div class="product-price mb-4">
+                        <span class="current-price">$89.99</span>
+                        <!-- <span class="original-price">$119.99</span> -->
+                        <span class="badge bg-danger ms-3">25% OFF</span>
+                    </div>
+                    
+                    <div class="product-meta mb-4">
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="fas fa-check"></i>
+                            <span>200W maximum output</span>
+                        </div>
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="fas fa-check"></i>
+                            <span>Dual 18650 batteries</span>
+                        </div>
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="fas fa-check"></i>
+                            <span>0.96" OLED display</span>
+                        </div>
+                    </div>
+                    
+                    <!-- <div class="row g-3 mb-4">
+                      
+                        <div class="col-md-6">
+                            <label class="form-label">Quantity</label>
+                            <div class="input-group">
+                                <button class="btn btn-outline-secondary">-</button>
+                                <input type="text" class="form-control text-center" value="1">
+                                <button class="btn btn-outline-secondary">+</button>
+                            </div>
+                        </div>
+                    </div> -->
+                    
+                    <div class=" gap-3 mb-5">
+                        <button class="btn cart-btn btn-primary   py-3 px-5 flex-grow-1">
+                            <i class="fas fa-cart-plus me-2"></i> ADD TO CART
+                        </button>
+                       
+                    </div>
+                    
+              
+                </div>
+            </div>
+            
+            <!-- Product Tabs -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <h4 class="mb-4">Product Description</h4>
+                            <p>The CloudKing Pro Mod is the ultimate vaping device for cloud chasers and flavor enthusiasts alike. With its powerful 200W output and advanced chipset, you'll experience unparalleled performance and customization.</p>
+                            <p>Features include:</p>
+                            <ul>
+                                <li>200W maximum power output</li>
+                                <li>Dual 18650 battery configuration</li>
+                                <li>0.96" OLED display with intuitive interface</li>
+                                <li>Multiple vaping modes (VW, TC, TCR, Bypass)</li>
+                                <li>Zinc alloy construction with ergonomic design</li>
+                            </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Your Existing Footer -->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4" data-aos="fade-right">
+                    <div class="footer-logo">
+                        <img src="images/trippy.avif" alt="This Trippy Hippie Logo" class="logo-mandala">
+                    </div>
+                </div>
+                <div class="col-md-4 text-center" data-aos="fade-up">
+                    <div class="footer-info">
+                        <h5 class="trippy-text">THIS TRIPPY<br>HIPPIE</h5>
+                        <p>admin@thistrippyhippieofficial.com</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-left">
+                    <div class="footer-logo">
+                        <img src="images/trippy.avif" alt="This Trippy Hippie Logo" class="logo-mandala">
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-12 text-center">
+                    <p class="copyright">©2022 by This Trippy Hippie. Proudly created with Wix.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        // Initialize AOS
+        AOS.init();
+        
+        // Simple thumbnail click handler
+        document.querySelectorAll('.thumbnail').forEach(thumb => {
+            thumb.addEventListener('click', function() {
+                const mainImg = document.querySelector('.main-image img');
+                const thumbImg = this.querySelector('img');
+                mainImg.src = thumbImg.src;
+                
+                document.querySelectorAll('.thumbnail').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
