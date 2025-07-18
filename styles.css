@@ -557,6 +557,9 @@ header {
   padding-top: 1rem;
   border-top: 1px solid #dee2e6;
 }
+.hero-top-m{
+  margin-top: -400px;
+}
 .art-pieces {
   position: absolute;
   top: 0;
@@ -1002,7 +1005,12 @@ header {
   .hero-title {
     font-size: 2.5rem;
   }
-
+  .hero-section {
+      position: relative;
+      min-height: 100vh;
+      padding-top: 240px;
+      background: #0d6efd66;
+  }
   .designs-title {
     font-size: 2.2rem;
   }
